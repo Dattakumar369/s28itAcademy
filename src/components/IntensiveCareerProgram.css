@@ -1,0 +1,523 @@
+.intensive-career-program {
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 50%, #f8fafc 100%);
+  padding: 120px 20px;
+  position: relative;
+}
+
+.intensive-career-program::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #2563eb, transparent);
+}
+
+.year-highlight {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.hero-banner {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  border-radius: 20px;
+  padding: 3rem;
+  margin: 3rem 0;
+  text-align: center;
+  color: white;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.banner-text {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  font-weight: 500;
+}
+
+.banner-text strong {
+  color: #fbbf24;
+  font-weight: 700;
+}
+
+.offer-banner {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #f97316 100%);
+  border-radius: 25px;
+  padding: 3.5rem;
+  margin: 3rem 0;
+  text-align: center;
+  box-shadow: 0 15px 50px rgba(251, 191, 36, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 15px 50px rgba(251, 191, 36, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.2); }
+  50% { box-shadow: 0 20px 60px rgba(251, 191, 36, 0.6), 0 0 0 3px rgba(255, 255, 255, 0.3); }
+}
+
+.offer-banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+  animation: rotate 15s linear infinite;
+}
+
+.offer-content {
+  color: white;
+}
+
+.offer-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.offer-title {
+  font-size: 3rem;
+  font-weight: 900;
+  margin: 1rem 0;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.offer-text {
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+.program-highlights {
+  margin: 4rem 0;
+}
+
+.highlights-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.highlight-card {
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+}
+
+.highlight-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 50px rgba(30, 64, 175, 0.25), 0 0 0 1px rgba(30, 64, 175, 0.1);
+  border-color: #2563eb;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.highlight-icon {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #1e40af 0%, #2563eb 50%, #0891b2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 6px 18px rgba(30, 64, 175, 0.3);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.highlight-icon::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.highlight-card:hover .highlight-icon {
+  transform: translateY(-5px) scale(1.15) rotate(5deg);
+  box-shadow: 0 10px 25px rgba(30, 64, 175, 0.4);
+}
+
+.highlight-card:hover .highlight-icon::before {
+  opacity: 1;
+}
+
+.highlight-icon svg {
+  width: 28px;
+  height: 28px;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.highlight-content {
+  flex: 1;
+}
+
+.highlight-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.highlight-desc {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.package-section {
+  margin: 4rem 0;
+  text-align: center;
+}
+
+.package-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 2rem;
+}
+
+.package-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.package-card {
+  background: linear-gradient(135deg, #1e40af 0%, #2563eb 50%, #0891b2 100%);
+  border-radius: 25px;
+  padding: 3rem;
+  color: white;
+  box-shadow: 0 15px 50px rgba(30, 64, 175, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.package-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+  animation: rotate 20s linear infinite;
+}
+
+.package-card:hover {
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 25px 70px rgba(30, 64, 175, 0.5), 0 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+.package-role {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  opacity: 0.95;
+}
+
+.package-amount {
+  font-size: 3rem;
+  font-weight: 900;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.fast-track-section {
+  margin: 3rem 0;
+}
+
+.fast-track-card {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border-radius: 16px;
+  padding: 2.5rem;
+  text-align: center;
+  border-left: 5px solid #2563eb;
+}
+
+.fast-track-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+
+.fast-track-text {
+  font-size: 1.1rem;
+  color: #475569;
+  line-height: 1.7;
+}
+
+.fee-section {
+  margin: 4rem 0;
+}
+
+.fee-card {
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 3rem;
+  max-width: 700px;
+  margin: 0 auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.fee-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.fee-details {
+  margin-bottom: 2rem;
+}
+
+.fee-original,
+.fee-discount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.fee-discount {
+  border-bottom: none;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.fee-label {
+  font-size: 1rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.fee-value {
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.fee-value.original {
+  color: #94a3b8;
+  text-decoration: line-through;
+}
+
+.fee-value.discounted {
+  background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 2.5rem;
+}
+
+.fee-gst {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-left: 0.5rem;
+}
+
+.fee-note {
+  background: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.fee-note p {
+  color: #475569;
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.warning-section {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+  border-radius: 16px;
+  border-left: 5px solid #ef4444;
+}
+
+.warning-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #991b1b;
+  margin: 0;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .intensive-career-program {
+    padding: 80px 15px;
+  }
+
+  .section-header {
+    margin-bottom: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-banner {
+    padding: 2rem 1.5rem;
+    border-radius: 16px;
+    margin: 2rem 0;
+  }
+
+  .banner-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .offer-banner {
+    padding: 2.5rem 1.5rem;
+    margin: 2rem 0;
+    border-radius: 20px;
+  }
+
+  .offer-badge {
+    font-size: 0.85rem;
+    padding: 0.4rem 1.2rem;
+  }
+
+  .offer-title {
+    font-size: 1.8rem;
+    margin: 0.8rem 0;
+  }
+
+  .offer-text {
+    font-size: 0.95rem;
+  }
+
+  .highlights-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .highlights-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .highlight-card {
+    padding: 1.5rem;
+  }
+
+  .highlight-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .highlight-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .highlight-title {
+    font-size: 1rem;
+  }
+
+  .highlight-desc {
+    font-size: 0.85rem;
+  }
+
+  .package-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .package-cards {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .package-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .package-role {
+    font-size: 1.1rem;
+  }
+
+  .package-amount {
+    font-size: 2.2rem;
+  }
+
+  .fast-track-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .fast-track-title {
+    font-size: 1.2rem;
+  }
+
+  .fast-track-text {
+    font-size: 1rem;
+  }
+
+  .fee-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .fee-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .fee-value.discounted {
+    font-size: 1.8rem;
+  }
+
+  .warning-section {
+    padding: 1.5rem;
+  }
+
+  .warning-text {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+

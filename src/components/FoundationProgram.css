@@ -1,0 +1,442 @@
+.foundation-program {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  padding: 120px 20px;
+  position: relative;
+}
+
+.foundation-program::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #667eea, transparent);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 25px rgba(30, 64, 175, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.section-badge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: shimmer 2s infinite;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #1e293b 0%, #1e40af 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #64748b;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.program-card {
+  background: #ffffff;
+  border: 2px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 2.5rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.program-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #1e40af 0%, #2563eb 100%);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+  box-shadow: 0 0 20px rgba(30, 64, 175, 0.5);
+}
+
+.program-card::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(102, 126, 234, 0.05) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.program-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(30, 64, 175, 0.2), 0 0 0 1px rgba(30, 64, 175, 0.1);
+  border-color: #2563eb;
+}
+
+.program-card:hover::before {
+  transform: scaleX(1);
+}
+
+.program-card:hover::after {
+  opacity: 1;
+}
+
+.card-icon {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #1e40af 0%, #2563eb 50%, #0891b2 100%);
+  color: white;
+  box-shadow: 0 8px 20px rgba(30, 64, 175, 0.3);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.card-icon::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card-icon:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 12px 30px rgba(30, 64, 175, 0.4);
+}
+
+.card-icon:hover::before {
+  opacity: 1;
+}
+
+.card-icon svg {
+  width: 32px;
+  height: 32px;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+
+.card-description {
+  color: #64748b;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.card-duration {
+  font-size: 2.5rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+}
+
+.fee-amount {
+  font-size: 3rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.feature-list li {
+  padding: 0.8rem 0;
+  color: #475569;
+  font-size: 1rem;
+  line-height: 1.7;
+  border-bottom: 1px solid #f1f5f9;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.feature-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.feature-list li:hover {
+  color: #1e40af;
+  padding-left: 2rem;
+  font-weight: 600;
+}
+
+.feature-list li:hover::before {
+  opacity: 1;
+}
+
+.feature-list li:last-child {
+  border-bottom: none;
+}
+
+.card-note {
+  margin-top: 1.5rem;
+  padding: 1.2rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border-radius: 12px;
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  border-left: 4px solid #2563eb;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.motivation-section {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f1f5f9 100%);
+  border-radius: 30px;
+  padding: 4rem;
+  margin-top: 4rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(102, 126, 234, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.motivation-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(102, 126, 234, 0.05) 0%, transparent 70%);
+  animation: rotate 20s linear infinite;
+}
+
+.motivation-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.motivation-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 1.5rem;
+}
+
+.motivation-text {
+  font-size: 1.1rem;
+  color: #475569;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.motivation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.motivation-item {
+  background: white;
+  padding: 1.2rem;
+  border-radius: 15px;
+  font-weight: 600;
+  color: #1e293b;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.motivation-item:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(30, 64, 175, 0.2);
+  border-color: #2563eb;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.motivation-quote {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #667eea;
+  font-style: italic;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .foundation-program {
+    padding: 80px 15px;
+  }
+
+  .section-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .section-badge {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .program-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .program-card {
+    padding: 2rem 1.5rem;
+    border-radius: 20px;
+  }
+
+  .card-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1.2rem;
+  }
+
+  .card-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .card-title {
+    font-size: 1.3rem;
+  }
+
+  .card-description {
+    font-size: 0.95rem;
+  }
+
+  .card-duration {
+    font-size: 2rem;
+  }
+
+  .fee-amount {
+    font-size: 2.2rem;
+  }
+
+  .feature-list li {
+    font-size: 0.9rem;
+    padding: 0.6rem 0;
+    padding-left: 1.2rem;
+  }
+
+  .motivation-section {
+    padding: 2.5rem 1.5rem;
+    margin-top: 3rem;
+    border-radius: 20px;
+  }
+
+  .motivation-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .motivation-text {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .motivation-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .motivation-item {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .motivation-quote {
+    font-size: 1.1rem;
+    margin-top: 1.2rem;
+  }
+}
+
