@@ -19,12 +19,16 @@ const Header = ({ onEnrollClick }) => {
     }
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="header-container">
-        <div className="logo">
-          <h1>S28 IT Academy</h1>
-        </div>
+        <button className="logo" onClick={scrollToTop} aria-label="Go to home">
+          <img src="/s28.png" alt="S28 IT Solutions" className="logo-image" />
+        </button>
         <nav className="nav">
           <button onClick={() => scrollToSection('foundation')} className="nav-link">
             Foundation

@@ -25,14 +25,35 @@
   align-items: center;
 }
 
-.logo h1 {
-  font-size: 1.6rem;
-  font-weight: 800;
-  background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  letter-spacing: -0.5px;
+.logo {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.logo-image {
+  height: 65px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  display: block;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+.logo:hover .logo-image {
+  transform: scale(1.08);
+  filter: brightness(1.1);
+}
+
+.logo:active {
+  transform: scale(0.98);
 }
 
 @keyframes gradientShift {
@@ -100,8 +121,12 @@
     flex-wrap: wrap;
   }
 
-  .logo h1 {
-    font-size: 1.1rem;
+  .logo {
+    height: 55px;
+  }
+
+  .logo-image {
+    height: 50px;
   }
 
   .nav {

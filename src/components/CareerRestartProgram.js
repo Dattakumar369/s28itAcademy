@@ -61,12 +61,96 @@ const CareerRestartProgram = () => {
         <div className="technologies-section">
           <h3 className="section-subtitle">Available Technologies</h3>
           <div className="technologies-grid">
-            <div className="tech-item">Java Development</div>
-            <div className="tech-item">Multi Cloud with DevOps</div>
-            <div className="tech-item">Automation Testing</div>
-            <div className="tech-item">ETL Testing</div>
-            <div className="tech-item">Workday</div>
-            <div className="tech-item">SAP GRC</div>
+            <div className="tech-item">
+              <div className="tech-image-wrapper">
+                <img 
+                  src="/technologies/java-development.png" 
+                  alt="Java Development"
+                  className="tech-image"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.nextSibling.style.display = 'block';
+                  }}
+                />
+                <span className="tech-fallback" style={{display: 'none'}}>Java Development</span>
+              </div>
+              <div className="tech-name">Java Development</div>
+            </div>
+            <div className="tech-item">
+              <div className="tech-image-wrapper">
+                <img 
+                  src="/technologies/multi-cloud-devops.png" 
+                  alt="Multi Cloud with DevOps"
+                  className="tech-image"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.nextSibling.style.display = 'block';
+                  }}
+                />
+                <span className="tech-fallback" style={{display: 'none'}}>Multi Cloud with DevOps</span>
+              </div>
+              <div className="tech-name">Multi Cloud with DevOps</div>
+            </div>
+            <div className="tech-item">
+              <div className="tech-image-wrapper">
+                <img 
+                  src="/technologies/automation-testing.png" 
+                  alt="Automation Testing"
+                  className="tech-image"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.nextSibling.style.display = 'block';
+                  }}
+                />
+                <span className="tech-fallback" style={{display: 'none'}}>Automation Testing</span>
+              </div>
+              <div className="tech-name">Automation Testing</div>
+            </div>
+            <div className="tech-item">
+              <div className="tech-image-wrapper">
+                <img 
+                  src="/technologies/etl-testing.png" 
+                  alt="ETL Testing"
+                  className="tech-image"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.nextSibling.style.display = 'block';
+                  }}
+                />
+                <span className="tech-fallback" style={{display: 'none'}}>ETL Testing</span>
+              </div>
+              <div className="tech-name">ETL Testing</div>
+            </div>
+            <div className="tech-item">
+              <div className="tech-image-wrapper">
+                <img 
+                  src="/technologies/workday.png" 
+                  alt="Workday"
+                  className="tech-image"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.nextSibling.style.display = 'block';
+                  }}
+                />
+                <span className="tech-fallback" style={{display: 'none'}}>Workday</span>
+              </div>
+              <div className="tech-name">Workday</div>
+            </div>
+            <div className="tech-item">
+              <div className="tech-image-wrapper">
+                <img 
+                  src="/technologies/sap-grc.png" 
+                  alt="SAP GRC"
+                  className="tech-image"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.nextSibling.style.display = 'block';
+                  }}
+                />
+                <span className="tech-fallback" style={{display: 'none'}}>SAP GRC</span>
+              </div>
+              <div className="tech-name">SAP GRC</div>
+            </div>
           </div>
         </div>
 
